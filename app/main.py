@@ -4,6 +4,7 @@ import requests
 import urllib
 import utils
 
+from random import *
 from flask import Flask, redirect, render_template, request, url_for
 from flask_restplus import Resource, Api, fields
 from table import UserTable
@@ -33,6 +34,12 @@ users_model = api.model('SitesModel',
 api.parser().add_argument('page', type=int, help='Page', location='query')
 api.parser().add_argument('itemsInPage', type=int, help='Items in page', location='query')
 
+@ns.route('/random/<n>')
+class ADD_Random(Resource):
+    @api.response(200, 'Success')
+    @api.response(400, 'Validation Error')
+    def get(self, n):
+        return add_random(n)
 
 @ns.route('/users')
 class List_Users(Resource):
@@ -65,6 +72,21 @@ class Site(Resource):
     @api.response(200, 'Success')
     def delete(self, id):
         return delete_user(id)
+
+def gen_random(n):
+	res = []
+	for i in range(n):
+		res.append(randint(1, n))
+	return res
+
+def add_random(n):
+    n = int(n)
+    arr = []
+    arr = gen_random(n)
+    arr = gen_random(n)
+    for i in range(n):
+        result = UserTable().random(arr[i])
+    return result
 
 def list_users():
     page = int(request.args.get('page', "0"))

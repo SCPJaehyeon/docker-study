@@ -3,6 +3,14 @@ import json
 import utils
 
 class UserTable(Database):
+    def random(self, n):
+        sql = "INSERT INTO wp_random(random) values({});".format(n)
+        print("INPUT > {}".format(sql))
+        result = None
+        self.cursor.execute(sql)
+        self.db.commit()
+        return result
+
     def user(self, id):
         sql =  "SELECT user_login FROM wp_users "
         sql += "WHERE id={};".format(id)
