@@ -1,6 +1,6 @@
 from random import *
 
-def gen_randon(n):
+def gen_random(n):
 	res = []
 	for i in range(n):
 		res.append(randint(1, n))
@@ -33,7 +33,7 @@ def quick_sort(lst):
 def main():
     n = int(input())
     res_fir, res_sec = [], []
-    res_fir = gen_randon(n)
+    res_fir = gen_random(n)
     res_sec = sorted_random(n)
     print(res_fir)
     print(res_sec)
