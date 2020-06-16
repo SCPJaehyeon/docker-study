@@ -2,17 +2,17 @@
 ccit2_finalexam
 
 Q1. python으로 random 숫자를 n개 생성하는 함수를 만드세요. (20점)
-    함수: gen_random(n), sorted_random(n)
-    gen_random(n) : 정렬되지 않는 n개의 난수 숫자 리스트를.
-    sorted_random(n) : 정렬된 n개의 난수 리스트.
-    1) INPUT n = n개의 숫자를 의미
-    2) OUTPUT :  list : [r] 에,
-                              r = random 정수 숫자, 0 < r <= n
-              -. gen_random()의 경우, 정렬되지 않은 그 상태로 출력,
-              -. sorted_random() 의 경우 작은 숫자부터 정렬되어 결과가 나오도록 출력
-    3) 함수를 실행하는 메인함수 작성필요.
-    4) 정렬 알고리즘의 시간복잡도 설명하시오. (README.md 파일에 추가할 것)
-       (시간복잡도가 좋은 것에 따라 평가점수 달라짐)
+함수: gen_random(n), sorted_random(n)
+gen_random(n) : 정렬되지 않는 n개의 난수 숫자 리스트를.
+sorted_random(n) : 정렬된 n개의 난수 리스트.
+1) INPUT n = n개의 숫자를 의미
+2) OUTPUT :  list : [r] 에,
+r = random 정수 숫자, 0 < r <= n
+-. gen_random()의 경우, 정렬되지 않은 그 상태로 출력,
+-. sorted_random() 의 경우 작은 숫자부터 정렬되어 결과가 나오도록 출력
+3) 함수를 실행하는 메인함수 작성필요
+4) 정렬 알고리즘의 시간복잡도 설명하시오. (README.md 파일에 추가할 것)(시간복잡도가 좋은 것에 따라 평가점수 달라짐)
+
 A1.
 - gen_random(n), sorted_random(n) 함수 작성 완료
 - sorted_random(n)에서 정렬 알고리즘 quick sort 사용
