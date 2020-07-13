@@ -28,7 +28,7 @@ Q2. Docker 기반의 워드 프레스를 구축하시오. (20점)
 
 A2.
 - 구축완료
-- Taleem Theme 및 BuddyPress Plugin 새로운 테마와 플러그인이 폴더로 옮겨짐
+- XXX Theme 및 XXX Plugin 새로운 테마와 플러그인이 폴더로 옮겨짐 > 저작권 문제가 있을 수 있으므로 해당 폴더 삭제
 - docker-compose 실행시 알아서 셋팅됨
 - id/pass == admin/password 셋팅됨
 - 워드프레스 사이트 URL > http://[webserver]
